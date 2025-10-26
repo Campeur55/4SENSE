@@ -25,9 +25,6 @@ export default function About() {
                 journey with expertise, empathy, and genuine care.
               </p>
             </div>
-            <button className="bg-primary text-primary-foreground px-10 py-5 rounded-lg font-semibold hover:bg-secondary transition-colors text-xl">
-              Learn More About Me
-            </button>
           </div>
         </div>
       </div>

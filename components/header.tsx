@@ -14,7 +14,6 @@ export default function Header({ isScrolled }: HeaderProps) {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
-    { label: "Contact", href: "#contact" },
   ]
 
   const handleNavClick = (href: string) => {
@@ -50,8 +49,11 @@ export default function Header({ isScrolled }: HeaderProps) {
           </nav>
 
           {/* CTA Button */}
-          <button className="hidden md:block bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-secondary transition-colors font-medium">
-            Get Started
+          <button
+            onClick={() => handleNavClick("#contact")}
+            className="hidden md:block bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-secondary transition-colors font-medium"
+          >
+            Contact
           </button>
 
           {/* Mobile Menu Button */}
@@ -72,8 +74,11 @@ export default function Header({ isScrolled }: HeaderProps) {
                 {item.label}
               </button>
             ))}
-            <button className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-secondary transition-colors font-medium mt-4">
-              Get Started
+            <button
+              onClick={() => handleNavClick("#contact")}
+              className="w-full bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-secondary transition-colors font-medium mt-4"
+            >
+              Contact
             </button>
           </nav>
         )}
